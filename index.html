@@ -79,10 +79,16 @@
     <script type="text/javascript">
 
       vkBridge.send('VKWebAppInit');
-      adv();
+      showADV();
       getData();
 
-      function adv(){
+      function showADV(){
+        vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
+          console.log(data);
+        );
+      }
+
+      function showADVReward(){
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
           console.log(data);
           unityI.SendMessage('VKSDK', 'AdvClosed',JSON.stringify(data.result));}
