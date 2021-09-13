@@ -84,8 +84,7 @@
 
       function showADV(){
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
-          console.log(data);
-        );
+          console.log(data);});
       }
 
       function showADVReward(){
@@ -106,11 +105,13 @@
         vkBridge.send('VKWebAppStorageGet',{"keys": ["_save"]}).then(_info =>{
           console.log(_info);
           unityI.SendMessage('VKSDK', 'GetDataReady', JSON.stringify(_info));
-      }
+      });}
+
       function setData(data){
           vkBridge.send('VKWebAppStorageSet',{"keys": ["_save"]}).then(_info =>{
-            console.log("GJ");
-      }
+            console.log("GJ")});
+    }
+
     </script>
   </body>
 </html>
