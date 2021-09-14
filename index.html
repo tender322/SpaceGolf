@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/VkVersion1.loader.js";
+      var loaderUrl = buildUrl + "/VkVerstion2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/VkVersion1.data",
-        frameworkUrl: buildUrl + "/VkVersion1.framework.js",
-        codeUrl: buildUrl + "/VkVersion1.wasm",
+        dataUrl: buildUrl + "/VkVerstion2.data",
+        frameworkUrl: buildUrl + "/VkVerstion2.framework.js",
+        codeUrl: buildUrl + "/VkVerstion2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "UncommonGamesStudio",
         productName: "SpaceGolf",
@@ -82,7 +82,6 @@
 
       vkBridge.send('VKWebAppInit');
       showADV();
-      getData();
 
       function showADV(){
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
