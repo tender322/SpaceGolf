@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/vkv2.loader.js";
+      var loaderUrl = buildUrl + "/vkv3.loader.js";
       var config = {
-        dataUrl: buildUrl + "/vkv2.data",
-        frameworkUrl: buildUrl + "/vkv2.framework.js",
-        codeUrl: buildUrl + "/vkv2.wasm",
+        dataUrl: buildUrl + "/vkv3.data",
+        frameworkUrl: buildUrl + "/vkv3.framework.js",
+        codeUrl: buildUrl + "/vkv3.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "UncommonGamesStudio",
         productName: "SpaceGolf",
@@ -59,7 +59,7 @@
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
-      var unityI = null;
+      var unityI =null;
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
@@ -76,7 +76,6 @@
       };
       document.body.appendChild(script);
     </script>
-
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script type="text/javascript">
 
