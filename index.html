@@ -81,7 +81,6 @@
 
       vkBridge.send('VKWebAppInit');
       showADV();
-      getData();
 
       function showADV(){
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
