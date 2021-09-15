@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/VkVerstion2.loader.js";
+      var loaderUrl = buildUrl + "/Vkversion2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/VkVerstion2.data",
-        frameworkUrl: buildUrl + "/VkVerstion2.framework.js",
-        codeUrl: buildUrl + "/VkVerstion2.wasm",
+        dataUrl: buildUrl + "/Vkversion2.data",
+        frameworkUrl: buildUrl + "/Vkversion2.framework.js",
+        codeUrl: buildUrl + "/Vkversion2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "UncommonGamesStudio",
         productName: "SpaceGolf",
@@ -76,12 +76,12 @@
       };
       document.body.appendChild(script);
     </script>
-
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script type="text/javascript">
 
       vkBridge.send('VKWebAppInit');
       showADV();
+      getData();
 
       function showADV(){
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
